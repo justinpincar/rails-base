@@ -1,0 +1,4 @@
+# To drop all tables:
+ActiveRecord::Base.establish_connection
+ActiveRecord::Base.connection.tables.each {|table| ActiveRecord::Base.connection.execute("DROP TABLE #{table}") }
+

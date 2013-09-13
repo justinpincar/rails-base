@@ -1,0 +1,24 @@
+production:
+  facebook:
+    app_id: TODO
+    app_secret: TODO
+  twitter:
+    app_id: TODO
+    app_secret: TODO
+
+development:
+  facebook:
+    app_id: TODO
+    app_secret: TODO
+  twitter:
+    app_id: TODO
+    app_secret: TODO
+
+test:
+  facebook:
+    app_id: TODO
+    app_secret: TODO
+  twitter:
+    app_id: TODO
+    app_secret: TODO
+

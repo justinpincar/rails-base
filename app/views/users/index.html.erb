@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="column">
+
+    <div class="large-12 columns ppl-profiles">
+      <div class="title page-title ppl-htag">
+        <h2>People we think you might like</h2>
+      </div>
+
+      <% @users.each do |user| %>
+        <div class="large-6 columns ppl-profile">
+          <div class="l-media">
+            <img src="<%= user.image.file.url(:medium) %>" class="pfi" alt="<%= user.name %>">
+            <div class="bd bio">
+              <h2 class="bio-name"><%= user.name %></h2>
+              <% if user.location_string.present? %>
+                <div class="bio-location">Reykjavik, Iceland</div>
+              <% end %>
+              <% if user.bio.present? %>
+                <blockquote><%= user.bio %></blockquote>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <div class="title page-title ppl-htag">
+      <h2>Find Your friends</h2>
+    </div>
+    <div class="large-12 columns ppl-social">
+      <div class="ppl-social-cell l-media">
+        <a href="#">
+          <span class="bdg bdg-share ppl-social-icon"><span class="icon-facebook"></span></span>
+          <div class="ppl-social-type">Through Facebook</div>
+        </a>
+      </div>
+      <div class="ppl-social-cell l-media">
+        <a href="#">
+          <span class="bdg bdg-share ppl-social-icon"><span class="icon-twitter"></span></span>
+          <div class="ppl-social-type">Through Twitter</div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="title page-title ppl-htag">
+      <h2>SEARCH USERS</h2>
+    </div>
+    <div class="ppl-search">
+      <form class="custom">
+        <div>
+          <input class="ppl-search-input" type="text" placeholder="Type here to search">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

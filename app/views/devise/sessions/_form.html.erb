@@ -1,0 +1,16 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <% resource.errors.full_messages.each do |msg| %>
+    <div><%= msg %></div>
+  <% end %>
+
+  <%= f.text_field :email, :placeholder => "Email" %><br />
+  <%= f.password_field :password, :placeholder => "Password" %><br />
+  <br />
+  <a href="<%= new_password_path(resource) %>">Forgot password?</a><br />
+  <br />
+  <%= f.submit "Sign In" %><br />
+  <br />
+  <a href="/users/auth/facebook">Facebook Login</a><br />
+  <a href="/users/auth/twitter">Twitter Login</a>
+<% end %>
+

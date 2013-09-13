@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1 class="title page-title">Find your account</h1>
+    <p class="edit-scrn-copy1">Email me a link to reset my password:</p>
+  </div>
+
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :class => "custom", :method => :post }) do |f| %>
+    <div class="large-6 columns">
+      <section>
+      <div>
+        <%= f.email_field :email, :placeholder => "Email Address", :autofocus => true %>
+      </div>
+      </section>
+    </div>
+
+    <div class="large-12 columns">
+      <div class="row edit-scrn-nav">
+        <div class="column l-inline">
+          <a class="button size-m secondary" href="<%= new_session_path(resource) %>">Whoops! No thanks.</a>
+          <%= f.submit "Send me an email", :class => "button size-m" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

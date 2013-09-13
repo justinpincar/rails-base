@@ -1,0 +1,14 @@
+<%= debugger %>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <% resource.errors.full_messages.each do |msg| %>
+    <div><%= msg %></div>
+  <% end %>
+
+  <%= f.text_field :email, :placeholder => "Email" %><br />
+  <%= f.password_field :password, :placeholder => "Password" %><br />
+  <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %><br />
+  <br />
+  <%= f.submit "Create Account" %>
+<% end %>
+

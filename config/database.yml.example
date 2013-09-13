@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: startup_signal_development
+  pool: 5
+  username: postgres
+  password: password
+  min_messages: WARNING
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: startup_signal_test
+  pool: 5
+  username: postgres
+  password: password
+  min_messages: WARNING
+  host: localhost
+

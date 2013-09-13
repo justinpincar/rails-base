@@ -1,0 +1,16 @@
+<%= render :partial => "pre_launch_subscribers/header" %>
+
+This is pre launch content.
+<br />
+<br />
+
+Sign up:
+<%= form_for(@pre_launch_subscriber) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+<%= render :partial => "pre_launch_subscribers/footer" %>
+

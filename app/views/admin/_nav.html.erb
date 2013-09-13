@@ -1,0 +1,14 @@
+<h1>Admin</h1>
+
+Hi, <%= current_user.email %><br />
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br />
+<br />
+<br />
+
+<div>
+  <%= link_to "Users", admin_users_path %>
+</div>
+<br />
+<br />
+<br />
+
